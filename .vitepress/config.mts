@@ -42,11 +42,38 @@ export default defineConfig({
           ],
         },
         {
-          text: '核心功能',
+          text: '教务学习',
           collapsed: false,
           items: [
             { text: '📅 课表管理', link: '/features/schedule' },
             { text: '📊 成绩查询', link: '/features/grades' },
+            { text: '📝 考试安排', link: '/features/exam' },
+            { text: '📖 培养方案', link: '/features/training-plan' },
+            { text: '📕 教材查询', link: '/features/textbooks' },
+          ],
+        },
+        {
+          text: '校园生活',
+          collapsed: false,
+          items: [
+            { text: '🏠 宿舍签到', link: '/features/dorm' },
+            { text: '⚡ 电费查询', link: '/features/electricity' },
+            { text: '🏫 空教室', link: '/features/classroom' },
+            { text: '👕 洗衣机', link: '/features/laundry' },
+            { text: '🍜 食堂 & 打分', link: '/features/canteen' },
+            { text: '📰 校园新闻', link: '/features/news' },
+          ],
+        },
+        {
+          text: '实用工具',
+          items: [
+            { text: '🏃 体测计算器', link: '/features/fitness-test' },
+          ],
+        },
+        {
+          text: '即将上线',
+          collapsed: true,
+          items: [
             { text: '💳 校园卡', link: '/features/card' },
             { text: '📚 图书馆', link: '/features/library' },
             { text: '🗺️ 校园导览', link: '/features/map' },

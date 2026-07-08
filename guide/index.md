@@ -58,5 +58,5 @@ PocketAHUT 不会存储你的教务系统明文密码。登录走教务处官方
 
 - [功能总览](/features/) — 看看还有哪些实用功能
 - [课表管理](/features/schedule) — 深入了解课表的用法
-- [校园卡](/features/card) — 充值、消费记录、挂失
+- [食堂菜品 & 打分](/features/canteen) — 干饭人的好帮手
 - [常见问题](/faq) — 遇到问题来这里找答案
