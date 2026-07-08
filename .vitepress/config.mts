@@ -5,6 +5,7 @@ export default defineConfig({
   title: 'PocketAHUT',
   description: 'PocketAHUT — 安工大校园生活一站式服务平台',
   lang: 'zh-CN',
+  base: '/PocketAHUT/',
   lastUpdated: true,
   cleanUrls: true,
   ignoreDeadLinks: true,
