@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitepress'
+import { teekConfig } from './teek-config.mts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  extends: teekConfig, // 注册 Teek 主题配置
   title: 'PocketAHUT',
   description: 'PocketAHUT — 安工大校园生活一站式服务平台',
   lang: 'zh-CN',
@@ -9,6 +11,8 @@ export default defineConfig({
   lastUpdated: true,
   cleanUrls: true,
   ignoreDeadLinks: true,
+  // 屏蔽 .git / node_modules 等目录，避免插件扫描报非 .md 警告
+  srcExclude: ['**/.git/**', '**/node_modules/**', '**/.github/**'],
 
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
