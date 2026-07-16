@@ -1,8 +1,9 @@
 # 口袋安小工文档
 
 <p align="center">
-  <img src="../public/logo.jpg" width="96" alt="口袋安小工 Logo" />
+  <img src="public/logo.jpg" width="96" alt="口袋安小工 Logo" />
 </p>
+
 
 <p align="center">
   <strong>安工大校园生活一站式服务平台官方文档</strong>
