@@ -47,7 +47,39 @@ sidebar: false
     <strong>Yukun Han</strong>
     <span>贡献者</span>
   </a>
+</div>
 
+## 捐赠感谢
+
+感谢以下同学对 口袋安小工 的捐赠支持！排名不分先后！
+
+<div class="donors-grid">
+  <span class="donor-tag">*厘</span>
+  <span class="donor-tag">*七</span>
+  <span class="donor-tag">(*)</span>
+  <span class="donor-tag">*桐</span>
+  <span class="donor-tag">*。</span>
+  <span class="donor-tag">@*y</span>
+  <span class="donor-tag">*之</span>
+  <span class="donor-tag">*明</span>
+  <span class="donor-tag">*崚</span>
+  <span class="donor-tag">E*e</span>
+  <span class="donor-tag">*酌</span>
+  <span class="donor-tag">**婷</span>
+  <span class="donor-tag">r*n</span>
+  <span class="donor-tag">C*e</span>
+  <span class="donor-tag">*🎀</span>
+  <span class="donor-tag">*饿</span>
+  <span class="donor-tag">*峰</span>
+  <span class="donor-tag">**浩</span>
+  <span class="donor-tag">T*i</span>
+  <span class="donor-tag">*印</span>
+  <span class="donor-tag">*速</span>
+  <span class="donor-tag">w*m</span>
+  <span class="donor-tag">*朗</span>
+  <span class="donor-tag">*家</span>
+  <span class="donor-tag">*郎</span>
+  <span class="donor-tag">*生</span>
 </div>
 
 ## 成为贡献者
@@ -59,6 +91,33 @@ sidebar: false
 - **完善文档**：点击每页底部的「在 GitHub 上编辑此页」直接修改
 
 <style scoped>
+.donors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 2rem;
+}
+
+.donor-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+  background: var(--vp-c-bg-soft);
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  user-select: none;
+}
+
+.donor-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: var(--vp-c-brand-2);
+  color: var(--vp-c-brand-1);
+}
+
 .contributors-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));

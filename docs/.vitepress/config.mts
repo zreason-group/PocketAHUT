@@ -23,8 +23,9 @@ export default defineConfig({
       { text: "首页", link: "/" },
       { text: "使用指南", link: "/guide/" },
       { text: "功能模块", link: "/features/" },
-      { text: "常见问题", link: "/faq" },
+      { text: "常见问题", link: "/faq/" },
       { text: "更新日志", link: "/changelog" },
+      { text: "贡献者", link: "/contributors" },
     ],
 
     sidebar: {
@@ -35,6 +36,20 @@ export default defineConfig({
             { text: "快速开始", link: "/guide/" },
             { text: "下载安装", link: "/guide/install" },
             { text: "账号与绑定", link: "/guide/account" },
+          ],
+        },
+      ],
+      "/faq/": [
+        {
+          text: "常见问题",
+          items: [
+            { text: "全部问题", link: "/faq/" },
+            { text: "账号与登录", link: "/faq/account/" },
+            { text: "课表", link: "/faq/schedule/" },
+            { text: "成绩", link: "/faq/grades/" },
+            { text: "宿舍与电费", link: "/faq/dorm/" },
+            { text: "校园服务", link: "/faq/campus/" },
+            { text: "其他", link: "/faq/other/" },
           ],
         },
       ],
