@@ -15,13 +15,19 @@
 
   --fabric-linen-opacity: 0.025;
   --fabric-canvas-opacity: 0.12;
+  --fabric-pattern-r: 0;
+  --fabric-pattern-g: 0;
+  --fabric-pattern-b: 0;
 
   /* ── 全局字体 ── */
   --vp-font-family-base: "Douyin Sans", "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .dark {
-  --fabric-linen-opacity: 0.06;
+  --fabric-linen-opacity: 0.025;
+  --fabric-pattern-r: 255;
+  --fabric-pattern-g: 255;
+  --fabric-pattern-b: 255;
 }
 
 /* ==================== 页面背景 ==================== */
@@ -32,15 +38,15 @@ html {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     );
 }
 
@@ -66,15 +72,15 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ) !important;
 }
 
@@ -86,7 +92,7 @@ body {
   background-image: none !important;
 }
 
-/* ==================== 本地导航（侧边栏切换 + 页面大纲） ==================== */
+/* ==================== 本地导航 ==================== */
 .VPLocalNav {
   background-color: var(--vp-local-nav-bg-color, var(--vp-c-bg)) !important;
   background-image:
@@ -94,15 +100,15 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ) !important;
 }
 
@@ -114,15 +120,15 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ) !important;
 }
 
@@ -134,15 +140,15 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ) !important;
 }
 
@@ -154,15 +160,15 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ) !important;
 }
 
@@ -174,46 +180,40 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     );
   border-radius: 12px;
   padding: 24px 32px;
 }
 
 /* ==================== 首页特性卡片 ==================== */
-.VPFeature .box {
-  background-color: var(--vp-c-bg-soft);
+.VPFeature {
   background-image:
     repeating-linear-gradient(
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
-    );
-  border: 1px solid var(--vp-c-border);
-  border-radius: 16px;
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
+    ) !important;
 }
 
-.VPFeature .box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
+
 
 /* ==================== 自定义块 ==================== */
 .custom-block {
@@ -222,36 +222,19 @@ body {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     );
 }
 
-/* ==================== 表格 ==================== */
-table {
-  background-image:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 4px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 2px,
-      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 4px
-    );
-}
+
 
 /* ==================== 分隔线 ==================== */
 hr {
@@ -268,15 +251,15 @@ hr {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     );
   border-top: 1px solid var(--vp-c-border);
 }
@@ -289,15 +272,15 @@ hr {
       90deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     ),
     repeating-linear-gradient(
       0deg,
       transparent,
       transparent 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
-      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 2px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-linen-opacity)) 4px
     );
 }
 
@@ -308,14 +291,14 @@ hr {
       45deg,
       transparent,
       transparent 1px,
-      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 1px,
-      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 2px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-canvas-opacity)) 1px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-canvas-opacity)) 2px
     ),
     repeating-linear-gradient(
       -45deg,
       transparent,
       transparent 1px,
-      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 1px,
-      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 2px
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-canvas-opacity)) 1px,
+      rgba(var(--fabric-pattern-r), var(--fabric-pattern-g), var(--fabric-pattern-b), var(--fabric-canvas-opacity)) 2px
     );
 }
