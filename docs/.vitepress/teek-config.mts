@@ -56,6 +56,10 @@ export const teekConfig = defineTeekConfig({
       defaultStyle: "aside",
       defaultValue: true,
     },
+    // 默认开启主题色扩散
+    themeColor: {
+      defaultSpread: true,
+    },
   },
 
   // ── 文章增强 ──
