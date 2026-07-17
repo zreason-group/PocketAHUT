@@ -1,0 +1,7 @@
+.VPNavBarTitle .logo,
+.VPNavBarTitle img.logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  object-fit: cover;
+}

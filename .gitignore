@@ -1,3 +1,6 @@
 node_modules/
 .vitepress/cache
 .vitepress/dist
+
+# Fu*k up MacOS
+.DS_Store
