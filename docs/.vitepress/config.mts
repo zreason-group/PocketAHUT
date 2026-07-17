@@ -14,7 +14,16 @@ export default defineConfig({
   // 屏蔽 .git / node_modules 等目录，避免插件扫描报非 .md 警告
   srcExclude: ["**/.git/**", "**/node_modules/**", "**/.github/**"],
 
-  head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+  head: [
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "https://cn-font.claude-code-best.win/packages/dymh/dist/DouyinSansBold/result.css",
+      },
+    ],
+  ],
 
   themeConfig: {
     logo: "/logo.svg",

@@ -1,0 +1,321 @@
+/* ============================================
+   fabric-texture.css - 织物质感背景系统
+   与 campus-frontend 的 mixins.scss 保持一致
+   每个表面保留主题底色 + 叠加织纹图案
+   ============================================ */
+
+/* ==================== 织物调色板 ==================== */
+:root {
+  --fabric-terracotta: #c4785a;
+  --fabric-terracotta-light: #d99b7d;
+  --fabric-sage: #8b9a7d;
+  --fabric-sage-light: #a8b59c;
+  --fabric-indigo: #5b6b8c;
+  --fabric-indigo-light: #7d8da8;
+
+  --fabric-linen-opacity: 0.025;
+  --fabric-canvas-opacity: 0.12;
+
+  /* ── 全局字体 ── */
+  --vp-font-family-base: "Douyin Sans", "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.dark {
+  --fabric-linen-opacity: 0.06;
+}
+
+/* ==================== 页面背景 ==================== */
+html {
+  background-color: var(--vp-c-bg);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    );
+}
+
+body {
+  background: transparent !important;
+}
+
+/* ==================== 布局容器 ==================== */
+.tk-layout.Layout,
+.VPContent,
+.VPHome,
+.VPDoc {
+  background: transparent !important;
+}
+
+/* ==================== 导航栏 ==================== */
+.VPNavBar,
+.VPNavBar .wrapper,
+.VPNavBar .content-body {
+  background-color: var(--vp-c-bg) !important;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ) !important;
+}
+
+/* 首页导航透明 */
+.home .VPNavBar,
+.home .VPNavBar .wrapper,
+.home .VPNavBar .content-body {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* ==================== 本地导航（侧边栏切换 + 页面大纲） ==================== */
+.VPLocalNav {
+  background-color: var(--vp-local-nav-bg-color, var(--vp-c-bg)) !important;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ) !important;
+}
+
+/* ==================== 侧边栏 ==================== */
+.VPSidebar {
+  background-color: var(--vp-c-bg) !important;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ) !important;
+}
+
+/* ==================== 移动端菜单 ==================== */
+.VPNavScreen {
+  background-color: var(--vp-nav-screen-bg-color, var(--vp-c-bg)) !important;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ) !important;
+}
+
+/* ==================== 下拉菜单 ==================== */
+.VPMenu {
+  background-color: var(--vp-c-bg-elv) !important;
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ) !important;
+}
+
+/* ==================== 文档内容区 ==================== */
+.VPDoc .content {
+  background-color: color-mix(in srgb, var(--vp-c-bg) 92%, transparent);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    );
+  border-radius: 12px;
+  padding: 24px 32px;
+}
+
+/* ==================== 首页特性卡片 ==================== */
+.VPFeature .box {
+  background-color: var(--vp-c-bg-soft);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    );
+  border: 1px solid var(--vp-c-border);
+  border-radius: 16px;
+}
+
+.VPFeature .box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* ==================== 自定义块 ==================== */
+.custom-block {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 2)) 4px
+    );
+}
+
+/* ==================== 表格 ==================== */
+table {
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 2px,
+      rgba(0, 0, 0, calc(var(--fabric-linen-opacity) * 1.5)) 4px
+    );
+}
+
+/* ==================== 分隔线 ==================== */
+hr {
+  border: none !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, var(--vp-c-border) 0%, transparent 100%) !important;
+}
+
+/* ==================== 页脚 ==================== */
+.tk-footer-info {
+  background-color: var(--vp-c-bg);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    );
+  border-top: 1px solid var(--vp-c-border);
+}
+
+/* ==================== 工具类 ==================== */
+.bg-linen {
+  background-color: var(--vp-c-bg-soft);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 2px,
+      rgba(0, 0, 0, var(--fabric-linen-opacity)) 4px
+    );
+}
+
+.bg-canvas {
+  background-color: var(--vp-c-bg-soft);
+  background-image:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 1px,
+      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 2px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 1px,
+      rgba(0, 0, 0, var(--fabric-canvas-opacity)) 2px
+    );
+}
