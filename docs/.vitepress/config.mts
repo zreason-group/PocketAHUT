@@ -15,7 +15,7 @@ export default defineConfig({
   srcExclude: ["**/.git/**", "**/node_modules/**", "**/.github/**"],
 
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "favicon.png" }],
     [
       "link",
       {
@@ -26,7 +26,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: "/logo.svg",
+    logo: "/logo.jpg",
 
     nav: [
       { text: "首页", link: "/" },
