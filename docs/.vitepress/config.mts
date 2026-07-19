@@ -7,7 +7,7 @@ export default defineConfig({
   title: "口袋安小工",
   description: "口袋安小工 — 安工大校园生活一站式服务平台",
   lang: "zh-CN",
-  base: "/PocketAHUT/",
+  base: "/",
   lastUpdated: true,
   cleanUrls: true,
   ignoreDeadLinks: true,
