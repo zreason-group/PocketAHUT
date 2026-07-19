@@ -15,6 +15,35 @@ export default defineConfig({
   srcExclude: ["**/.git/**", "**/node_modules/**", "**/.github/**"],
 
   head: [
+    // SEO / Open Graph
+    [
+      "meta",
+      {
+        property: "og:title",
+        content: "口袋安小工 — 安工大校园生活一站式服务平台",
+      },
+    ],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content:
+          "口袋安小工是安徽工业大学（AHUT）校园生活服务平台，提供课表查询、成绩查询、考试安排、电费查询、空教室、食堂评分等一站式校园服务。",
+      },
+    ],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:url", content: "https://pocket.domye.top" }],
+    ["meta", { property: "og:image", content: "/logo.jpg" }],
+    ["meta", { property: "og:locale", content: "zh_CN" }],
+    [
+      "meta",
+      {
+        name: "keywords",
+        content:
+          "安徽工业大学,安工大,口袋安小工,PocketAHUT,校园服务,课表查询,成绩查询,电费查询,空教室,AHUT",
+      },
+    ],
+    ["link", { rel: "canonical", href: "https://pocket.domye.top" }],
     ["link", { rel: "icon", href: "favicon.png" }],
     [
       "link",
